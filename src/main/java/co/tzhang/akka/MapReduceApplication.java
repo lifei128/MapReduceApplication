@@ -20,7 +20,7 @@ public class MapReduceApplication {
         Timeout timeout = new Timeout(FiniteDuration.create(2, TimeUnit.SECONDS));
         ActorSystem system = ActorSystem.create("MapReduceWordCount");
         ActorRef master = system.actorOf(Props.create(MasterActor.class), "master");
-        System.out.println(master.path());
+//        System.out.println(master.path());
         master.tell("The quick brown fox tried to jump over the lazy dog and fell on the dog", master);
         master.tell("Dog is man's best friend", master);
         master.tell("Dog and Fox belong to the same family", master);
