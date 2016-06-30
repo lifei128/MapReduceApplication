@@ -24,7 +24,7 @@ public class MasterActor extends UntypedActor {
     @Override
     public void onReceive(Object message) throws Exception {
         if (message instanceof String) {
-            System.out.println(mapActor.path());
+//            System.out.println(mapActor.path());
             mapActor.tell(message, getSelf());
         } else if (message instanceof MapData) {
             reduceActor.tell(message, getSelf());
